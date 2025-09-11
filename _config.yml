@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # Currently available options are "default", "air"
+site_theme               : "air" # Currently available options are "default", "air"
 title                    : "정이든 / Site Title"
 title_separator          : "-"
 name                     : &name "정이든"
@@ -27,8 +27,8 @@ author:
   name             : "정이든"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  location         : "경기도 수원시 장안구"
+  employer         : "한신대학교"
   uri              : # URL
   email            : "jungeden0906@gmail.com" 
 
