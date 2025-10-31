@@ -106,8 +106,8 @@ kramdown:
 
 # 템플릿에서 사용하는 컬렉션 유형을 제어하는 설정입니다.
 collections:
-  teaching:
-    output: true
+  study_log:
+    output: false
     permalink: /:collection/:path/
   baekjoon:
     output: true
@@ -139,7 +139,7 @@ defaults:
       author_profile: true
   - scope:
       path: ""
-      type: teaching
+      type: study_log
     values:
       layout: single
       author_profile: true

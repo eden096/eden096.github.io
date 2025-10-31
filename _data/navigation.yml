@@ -14,8 +14,8 @@ main:
   - title: "Journey"
     url: /journey/    
 
-  - title: "Teaching"
-    url: /teaching/    
+  - title: "Study Log"
+    url: /study_log/    
     
   - title: "Portfolio"
     url: /portfolio/

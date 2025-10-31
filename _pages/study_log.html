@@ -1,0 +1,18 @@
+---
+layout: archive
+title: "Study Log"
+permalink: /study_log/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% for post in site.study_log reversed %}
+  <div class="list__item">
+    <article class="archive__item">
+      <h2 class="archive__item-title">{{ post.title }}</h2>
+      <p class="archive__item-excerpt">{{ post.start_date | date: "%Y-%m-%d" }} ~ {{ post.end_date | date: "%Y-%m-%d" }}</p>
+      <p>{{ post.summary }}</p>
+    </article>
+  </div>
+{% endfor %}
