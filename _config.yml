@@ -3,13 +3,13 @@
 
 # 기본 사이트 설정
 locale: "ko-KR"
-site_theme: "air"
+site_theme: "air" # 현재 사용 가능한 테마: "default", "air"
 title: "정이든 / Site Title"
 title_separator: "-"
 name: &name "정이든"
-description: &description "정이든's academic portfolio"
-url: https://eden096.github.io
-baseurl: ""
+description: &description "정이든's academic portfolio" # 페이지에 별도 설명이 없을 경우 사용될 사이트의 기본 설명입니다.
+url: https://eden096.github.io # 사이트의 기본 호스트 이름 및 프로토콜입니다.
+baseurl: "" # 사이트의 하위 경로입니다. (예: "/blog")
 repository: "eden096/eden096.github.io"
 
 # 사이트 저자 - 사이드바의 저자 정보란에 표시될 내용을 관리합니다.
@@ -24,7 +24,7 @@ author:
   phone: "010-9885-7796"
   instagram: "eden_096"
 
-# 출판물 카테고리 - 출판물 카테고리 목록과 제목을 설정합니다.
+# 출판물 카테고리 - 출판물 카테고리 목록과 제목을 설정합니다. (현재 사용되지 않음)
 publication_category:
   books:
     title: 'Books'
@@ -34,26 +34,26 @@ publication_category:
     title: 'Conference Papers'
 
 # 사이트 설정
-words_per_minute: 160
-future: true
-read_more: "disabled"
+words_per_minute: 160 # 분당 단어 수 (글 읽는 시간 계산용)
+future: true # 미래 날짜의 게시물도 빌드할지 여부
+read_more: "disabled" # 활성화하면, 발췌문에 "더 읽기" 링크가 추가됩니다.
 comments:
-  provider: false
+  provider: false # 댓글 기능 제공자 (false, "disqus", "discourse" 등)
 staticman:
-  branch: "gh-pages"
+  branch: "gh-pages" # Staticman 댓글이 저장될 브랜치
 atom_feed:
-  hide: false
+  hide: false # 푸터에 RSS 피드 링크를 숨길지 여부
 
 # 분석
 analytics:
-  provider: "false"
+  provider: "false" # 분석 도구 제공자 (false, "google", "custom" 등)
 
-# 파일 읽기
-include:
+# 파일 읽기 설정
+include: # 빌드 시 포함할 파일 및 폴더
   - .htaccess
   - _pages
   - files
-exclude:
+exclude: # 빌드 시 제외할 파일 및 폴더
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -86,14 +86,14 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-# 변환
+# 변환 설정
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n\n"
+excerpt_separator: "\n\n" # 발췌문 구분자
 incremental: false
 
-# 마크다운 처리
+# 마크다운 처리 설정
 kramdown:
   input: GFM
   hard_wrap: false
@@ -169,14 +169,14 @@ defaults:
       author_profile: true
       share: false
 
-# Sass/SCSS
+# Sass/SCSS 설정
 sass:
   sass_dir: _sass
-  style: compressed
+  style: compressed # CSS 출력 스타일
 
-# 출력
-permalink: /:categories/:title/
-timezone: Etc/UTC
+# 출력 설정
+permalink: /:categories/:title/ # 고유 주소 형식
+timezone: Etc/UTC # 시간대
 
 # 플러그인
 plugins:
@@ -196,7 +196,7 @@ whitelist:
   - jekyll-redirect-from
   - jemoji
 
-# 아카이브
+# 아카이브 페이지 설정
 category_archive:
   type: liquid
   path: /categories/
@@ -204,7 +204,7 @@ tag_archive:
   type: liquid
   path: /tags/
 
-# HTML 압축
+# HTML 압축 설정
 compress_html:
   clippings: all
   ignore:
