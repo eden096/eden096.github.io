@@ -115,7 +115,7 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  talks:
+  journey:
     output: true
     permalink: /:collection/:path/
 
@@ -163,7 +163,7 @@ defaults:
       comment: true
   - scope:
       path: ""
-      type: talks
+      type: journey
     values:
       layout: talk
       author_profile: true

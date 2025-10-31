@@ -1,5 +1,5 @@
 ---
-title: '백준 1874번: 스택 수열'
+title: '[Silver II] 백준 1874번: 스택 수열'
 collection: baekjoon
 permalink: /baekjoon/baekjoon-1874
 date: 2025-09-23
