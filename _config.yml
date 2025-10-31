@@ -112,8 +112,8 @@ collections:
   baekjoon:
     output: true
     permalink: /:collection/:path/
-  portfolio:
-    output: true
+  future_activities:
+    output: false
     permalink: /:collection/:path/
   journey:
     output: true
@@ -155,7 +155,7 @@ defaults:
       comments: true
   - scope:
       path: ""
-      type: portfolio
+      type: future_activities
     values:
       layout: single
       author_profile: true

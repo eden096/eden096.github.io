@@ -1,0 +1,17 @@
+---
+layout: archive
+title: "Future Activities"
+permalink: /future_activities/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% for post in site.future_activities reversed %}
+  <div class="list__item">
+    <article class="archive__item">
+      <h2 class="archive__item-title">{{ post.title }}</h2>
+      <p>{{ post.description }}</p>
+    </article>
+  </div>
+{% endfor %}

@@ -17,8 +17,8 @@ main:
   - title: "Study Log"
     url: /study_log/    
     
-  - title: "Portfolio"
-    url: /portfolio/
+  - title: "Future Activities"
+    url: /future_activities/
         
   - title: "Blog Posts"
     url: /year-archive/
