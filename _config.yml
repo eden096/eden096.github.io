@@ -109,7 +109,7 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
-  publications:
+  baekjoon:
     output: true
     permalink: /:collection/:path/
   portfolio:
@@ -147,7 +147,7 @@ defaults:
       comments: true
   - scope:
       path: ""
-      type: publications
+      type: baekjoon
     values:
       layout: single
       author_profile: true
