@@ -19,12 +19,10 @@ author:
   bio: "컴퓨터에 항상 열정을 가진 학생입니다."
   location: "경기도 수원시 장안구"
   employer: "한신대학교"
-  uri: https://eden096.github.io
   email: "jungeden0906@gmail.com"
-  googlescholar: "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-  orcid: "http://orcid.org/yourorcidurl"
-  pubmed: "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   github: "eden096"
+  phone: "010-9885-7796"
+  instagram: "eden_096"
 
 # 출판물 카테고리 - 출판물 카테고리 목록과 제목을 설정합니다.
 publication_category:
