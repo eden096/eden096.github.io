@@ -88,14 +88,14 @@ $(document).ready(function () {
           }
         });
 
-  // Enable the theme switcher
-  $('.theme-switch').on('click', function(e) {
+  // Enable the theme switcher using event delegation
+  $('#site-nav').on('click', '.theme-switch', function(e) {
     e.preventDefault();
     e.stopPropagation();
     $('.theme-options').toggleClass('hidden');
   });
 
-  $('.theme-option').on('click', function(e) {
+  $('#site-nav').on('click', '.theme-option', function(e) {
     e.preventDefault();
     e.stopPropagation();
     const themeName = $(this).data('theme-name');
