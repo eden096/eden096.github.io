@@ -2,12 +2,12 @@
 .masthead__menu-item .theme-switch {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.45rem 0.7rem;
-  border-radius: 999px;
+  gap: 0.35rem;
+  padding: 0.42rem 0.6rem;
+  border-radius: 14px;
   background: linear-gradient(135deg, #6f9fff, #8ad7ff);
   color: #0f1b2d;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.01em;
   cursor: pointer;
   box-shadow: 0 6px 16px rgba(29, 80, 209, 0.18);
@@ -26,8 +26,9 @@
   display: inline-flex;
 }
 
-.theme-switch__label {
-  font-size: 0.95rem;
+.theme-switch__icon {
+  font-size: 1.05rem;
+  line-height: 1;
 }
 
 .theme-options {

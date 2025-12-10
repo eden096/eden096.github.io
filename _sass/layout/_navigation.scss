@@ -178,6 +178,7 @@
   background: var(--global-bg-color);
   display: flex;
   justify-content: center;
+  padding-right: 5rem; /* leave room for hamburger and theme switcher on the right */
 
   a {
     display: block;
@@ -259,6 +260,16 @@
             -ms-transform: scaleX(1);
                 transform: scaleX(1); /* reveal*/
       }
+    }
+
+    /* keep the theme switcher anchored to the far right, just left of the hamburger */
+    .persist.tail {
+      position: absolute;
+      right: 3rem;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+      z-index: 90;
     }
   }
 
