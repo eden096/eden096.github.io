@@ -17,6 +17,8 @@ let determineThemeSetting = () => {
 
 // Determine the computed theme, which can be "dark" or "light". If the theme setting is
 // "system", the computed theme is determined based on the user's system preference.
+const matchPrefersColorScheme = window.matchMedia ? window.matchMedia.bind(window) : null;
+
 let determineComputedTheme = () => {
   let themeSetting = determineThemeSetting();
   if (themeSetting === "sepia") {
@@ -25,7 +27,7 @@ let determineComputedTheme = () => {
   if (themeSetting != "system") {
     return themeSetting;
   }
-  return (userPref && userPref("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  return (matchPrefersColorScheme && matchPrefersColorScheme("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
 };
 
 // detect OS/browser preference
@@ -33,13 +35,27 @@ const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 
 
 // Set the theme on page load or when explicitly called
 let setTheme = (theme) => {
-  const use_theme =
+  const themeSetting =
     theme ||
     localStorage.getItem("theme") ||
     $("html").attr("data-theme") ||
-    browserPref;
+    browserPref ||
+    "light";
 
-  $("html").attr("data-theme", use_theme);
+  const resolvedTheme = (themeSetting === "system")
+    ? determineComputedTheme()
+    : (themeSetting === "sepia" ? "light" : themeSetting);
+
+  $("html").attr("data-theme", themeSetting === "system" ? resolvedTheme : themeSetting);
+
+  // Update Plotly charts to match the current theme
+  if (typeof Plotly !== "undefined") {
+    const themeData = (resolvedTheme === "dark") ? plotlyDarkLayout : plotlyLightLayout;
+    let plotlyChartDivs = document.querySelectorAll("pre>code.language-plotly + div");
+    plotlyChartDivs.forEach((chartDiv) => {
+      Plotly.relayout(chartDiv, { template: themeData });
+    });
+  }
 };
 
 /* ==========================================================================
@@ -107,6 +123,13 @@ $(document).ready(function () {
     setTheme(themeName);
     localStorage.setItem("theme", themeName);
     $('.theme-options').addClass('hidden');
+  });
+
+  // Close dropdown when clicking outside the theme menu
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.persist.tail').length) {
+      $('.theme-options').addClass('hidden');
+    }
   });
 
 
