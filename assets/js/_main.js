@@ -89,11 +89,15 @@ $(document).ready(function () {
         });
 
   // Enable the theme switcher
-  $('.theme-switch').on('click', function() {
+  $('.theme-switch').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
     $('.theme-options').toggleClass('hidden');
   });
 
-  $('.theme-option').on('click', function() {
+  $('.theme-option').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
     const themeName = $(this).data('theme-name');
     setTheme(themeName);
     localStorage.setItem("theme", themeName);
