@@ -15,8 +15,13 @@
             {% endif %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+          <li class="masthead__menu-item persist tail">
+            <a role="button" class="theme-switch" aria-labelledby="theme-icon"><i class="fa-solid fa-palette" aria-hidden="true" title="Change theme"></i></a>
+            <ul class="theme-options hidden">
+              <li class="theme-option" data-theme-name="light"><a role="button">Light <i class="fa-solid fa-sun"></i></a></li>
+              <li class="theme-option" data-theme-name="dark"><a role="button">Dark <i class="fa-solid fa-moon"></i></a></li>
+              <li class="theme-option" data-theme-name="sepia"><a role="button">Sepia <i class="fa-solid fa-tint"></i></a></li>
+            </ul>
           </li>
         </ul>
         <ul class="hidden-links hidden"></ul>
