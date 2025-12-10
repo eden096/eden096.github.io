@@ -71,9 +71,14 @@
   padding: 0.5rem 0.65rem;
   border-radius: 10px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
   color: #0f1b2d;
   transition: background-color 140ms ease, transform 120ms ease;
+
+  i {
+    margin: 0 auto;
+    font-size: 1.05rem;
+  }
 }
 
 .theme-option a:hover {
